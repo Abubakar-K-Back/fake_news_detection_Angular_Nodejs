@@ -1,0 +1,74 @@
+<html style="background-image: url('img_girl.jpg');">
+  <head>
+    <style>
+
+    </style>
+  </head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/pulse/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+  <div class="container" style="display: flex; justify-content: center; width: 200rem;">
+  <form class="container"  [formGroup]="loginform">
+
+
+            <h1 class="text-center pt-5"> Fake detector</h1>
+
+           <h4 class="label control-label  pt-5" >Enter String</h4>
+
+            <div class="input-group form-group">
+                  <input  id="username"  formControlName="val"  type="text" width="10" class="form-control text-center w-10"  placeholder="Text">
+              </div>
+
+           <button type="submit" value="Submit" class="btn btn-success mt-2" (click)="logins()">Analyse String</button>
+
+  </form>
+
+
+</div>
+
+<div class="container border-danger mb-3" *ngIf="showme" style="display: flex; justify-content: center; height: 10rem; width: 200rem; margin-top: 5rem;">
+
+
+<div class="card border-info mb-3 shadow p-3 bg-white rounded" style="width: 18rem; margin-right: 2rem;">
+  <div class="card-body">
+    <h5 class="card-title" style="display: flex; justify-content: center;">Spam Score</h5>
+    <h3 class="card-text" style="display: flex; justify-content: center;">{{spam}}</h3>
+  </div>
+</div>
+
+
+
+<div class="card border-info mb-3 shadow p-3  bg-white rounded" style="width: 18rem; margin-right: 2rem;">
+  <div class="card-body">
+    <h5 class="card-title" style="display: flex; justify-content: center;">Toxicity</h5>
+    <h3 class="card-text" style="display: flex; justify-content: center;">{{toxic}}</h3>
+  </div>
+</div>
+
+
+<div class="card border-info mb-3 shadow p-3 bg-white rounded" style="width: 18rem; margin-right: 2rem;">
+  <div class="card-body">
+    <h5 class="card-title" style="display: flex; justify-content: center;">Category</h5>
+    <h3 class="card-text" style="display: flex; justify-content: center;">{{category}}</h3>
+  </div>
+</div>
+
+
+<div class="card border-info mb-3 shadow p-3 bg-white rounded" style="width: 18rem; margin-right: 2rem;">
+  <div class="card-body">
+    <h5 class="card-title" style="display: flex; justify-content: center;">Emotion Score</h5>
+    <h3 class="card-text" style="display: flex; justify-content: center;">{{emotion}}</h3>
+  </div>
+</div>
+
+
+<div class="card border-danger mb-3 shadow p-3 bg-white rounded " style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title" style="display: flex; justify-content: center;">Fakeness</h5>
+    <h3 class="card-text" style="display: flex; justify-content: center;">{{fake}}</h3>
+  </div>
+</div>
+
+</div>
+
+
+
+</html>
